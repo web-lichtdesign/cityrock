@@ -1,0 +1,20 @@
+%form {
+  input, textarea, select {
+    //margin-bottom: 0.8em;
+  }
+
+  select {
+    display: block;
+    margin-bottom: 1.6em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.3em;
+    line-height: 1em
+  }
+
+  .button {
+    margin-top: 0.8em;
+  }
+}

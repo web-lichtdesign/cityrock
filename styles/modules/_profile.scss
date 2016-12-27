@@ -1,0 +1,38 @@
+%profile {
+  @extend %layout;
+  @extend %table;
+  @extend %form;
+
+  input {
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin-right: .4em;
+  }
+
+  #erste-hilfe-kurs-date {
+    display: none;
+  }
+
+  #phone-input {
+    display: none;
+  }
+
+  #password-input {
+    display: none;
+  }
+
+  @include respond-above("medium") {
+
+  }
+
+  @include respond-above("large") {
+
+  }
+
+}
+
+.profile {
+  @extend %profile;
+}

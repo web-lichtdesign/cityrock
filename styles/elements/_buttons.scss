@@ -1,0 +1,62 @@
+%button {
+  @extend %input-layout;
+  /* Reset */
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  /* Layout */
+  display: inline-block;
+  /* Looks */
+  font-family: $ff-body;
+  background: $c-primary;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+
+  transition: background 0.2s ease-in-out;
+
+  &.is-disabled {
+    opacity: 0.4;
+  }
+
+  &:hover {
+   
+    background: lighten($c-primary, 10%);
+    color: #fff;
+    border-bottom: none;
+  }
+}
+
+.button.error {
+  background: $c-error;
+
+  &:hover {
+    background: lighten($c-error, 10%);
+  }
+}
+
+.button, button/*input[type="button"], input[type="submit"], button*/ {
+  @extend %button;
+  font-size: $fs-normal;
+}
+
+.button--primary {
+  @extend %button;
+  //font-size: $fs-normal;
+}
+
+.button--big /*input[type="button"], input[type="submit"], button*/ {
+  @extend %button;
+  font-size: $fs-large;
+  padding: .6em 1.6em;
+}
+
+.button--secondary {
+  @extend %button;
+  background: linear-gradient(lighten(#444, 5%), darken(#444, 5%));
+  font-size: $fs-normal;
+  &:hover {
+    background-color: #444;
+  }
+}

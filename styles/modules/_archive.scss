@@ -1,0 +1,61 @@
+%archive {
+  @extend %layout;
+  @extend %form;
+  @extend %table;
+
+  .button {
+    margin-right: 0.4em;
+  }
+
+  .no-mobile {
+    display: none;
+  }
+
+  .list-item {
+    display: none;
+  }
+
+  .staff-list {
+    display: block;
+    margin-bottom: 0.3em;
+
+    & > span {
+      display: block;
+    }
+  }
+
+  @include respond-above("medium") {
+
+    .mobile {
+      display: none;
+    }
+
+    .course-list-heading {
+      span.no-mobile {
+        display: table-cell;
+      }
+
+      span.mobile {
+        display: none;
+      }
+    }
+
+    .course-list-item {
+      span.no-mobile {
+        display: table-cell;
+      }
+
+      span.mobile {
+        display: none;
+      }
+    }
+  }
+
+  @include respond-above("large") {
+
+  }
+}
+
+.archive {
+  @extend %archive;
+}

@@ -1,0 +1,63 @@
+%user {
+  @extend %layout;
+  @extend %table;
+  @extend %form;
+
+  .user-filter {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    span {
+      display: inline-block;
+      background-color: lighten($c-primary, 40%);
+      padding: 0.6em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: $c-primary;
+        color: white;
+      }
+    }
+  }
+
+  .qualification-list, .roles-list, .event-whitelist {
+    margin: 0.5em 2em;
+
+    & > li {
+      line-height: 1.4em;
+
+      &.missing:after {
+        font-weight: bold;
+        @include fa-icon();
+        content: $fa-var-exclamation;
+        color: $c-error;
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  .delete {
+    display: block;
+    background-color: $c-error;
+    color: black;
+
+    &:hover {
+      background: lighten($c-error, 20%);
+    }
+  }
+
+  .button {
+    margin-right: 0.4em;
+  }
+
+  @include respond-above("medium") {
+
+  }
+}
+
+.user {
+  @extend %user;
+}

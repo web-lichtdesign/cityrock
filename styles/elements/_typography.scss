@@ -1,0 +1,21 @@
+body {
+  font-family: $ff-body;
+  background: #fff;
+  color: #000;
+}
+
+p {
+  font-size: $fs-normal;
+  line-height: 1.4em;
+}
+
+a, .link {
+  color: $c-link;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($c-link, 5%);
+    
+  }
+}

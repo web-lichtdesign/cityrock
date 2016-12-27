@@ -1,0 +1,25 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+%calendar {
+
+  @extend %layout;
+
+
+  .fc-view-container {
+    background: #f9f9f9;
+  }
+
+  .fc-day {
+    //cursor: crosshair;
+  }
+//Hover effekt bei button entfernen
+a:hover{
+	border-width: 1;
+}
+  @include respond-above("medium") {
+
+  }
+}
+
+.calendar {
+  @extend %calendar;
+}

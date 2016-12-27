@@ -1,0 +1,76 @@
+$logo-width: 280px;
+$isMedium: false;
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+//Menü auf Bootstrap  umstellen
+%menu-entry {
+  display: block;
+  font-weight: 600;
+  line-height: 1em;
+  color: black;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  border-bottom: 0.2em rgba(black, 0) solid;
+  transition: border-color 0.3s ease;
+}
+
+%navigation {
+  @extend  .navbar;
+  @extend  .navbar-inverse;
+
+  @include span(12 of 12);
+  //margin-bottom: 0.3em;
+  ul li a:hover {
+    border: none;
+  }
+  ul li ul li a:hover{
+    color: #000000;
+  }
+  ul{
+    @extend .nav;
+    @extend .navbar-nav;
+
+  }
+
+
+  @include respond-above("medium") {
+
+
+  }
+
+  @include respond-above("large") {
+
+  }
+}
+
+.navigation {
+  @extend %navigation;
+}
+//Filter Menü
+.filter {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+  a{
+    float: right;
+  }
+  span {
+    float: left;
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-group;
+
+
+  }
+  .attention {
+    float: left;
+    span  {
+
+      &.active {
+        @extend .btn-danger;
+      }
+    }
+  }
+}
+
+
